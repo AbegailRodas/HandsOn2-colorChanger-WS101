@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #FF9897;
+            text-align: center;
+            height: 90vh;
+            padding-top: 100px;
+            color: #8441A4;
+        }
+        
+        
+        #color {
+            background-color: blue;
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+            margin-left: auto; 
+            margin-right: auto;
+        }
+        button {
+            height: 50px;
+            width: 100px;
+            background-color: #FF5894;
+            font-weight: bolder;
+            font-size: 18px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 50px;">JavaScript colorChanger() Hands-on.</h1>
+    <div id="color"></div><br>
+    <button id="btn">Click Me</button>
+
+    <script>
+        const color = document.getElementById("color"); 
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener('click', changeColor);
+
+        function changeColor() {
+            if (color.style.backgroundColor === "blue") 
+                color.style.backgroundColor = "green";
+             else {
+                color.style.backgroundColor = "blue";
+            }
+        }
+    </script>
+</body>
+</html>
